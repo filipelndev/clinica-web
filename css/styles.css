@@ -1,0 +1,140 @@
+:root{
+  /* Paleta refinada: neutros suaves + violeta e salmão */
+  --bg:#fbfbfc;
+  --surface:#ffffff;
+  --card:#ffffff;
+  --text:#0f1724; /* quase preto azul */
+  --muted:#6b7280; /* cinza médio */
+  --primary:#5b21b6; /* violeta mais elegante */
+  --accent:#ff726f; /* salmão suave */
+  --glass: rgba(255,255,255,0.6);
+  --shadow: 0 8px 24px rgba(15,23,36,0.06);
+  --radius:14px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+html{scroll-behavior:smooth}
+
+/* Dark theme variables */
+:root.dark{
+  --bg:#0f1720;
+  --card:#0b1220;
+  --text:#e6eef8;
+  --muted:#a6b3c2;
+  --primary:#7c5cff;
+  --accent:#ffb86b;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+html, body {
+  height: 100%;
+}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  flex-direction:column;
+}
+.container{max-width:95%;margin:0 10% 0 10% ;padding:1.5rem}
+.site-main{flex:1 0 auto}
+.site-header{padding:1rem 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-weight:600;color:var(--primary);text-decoration:none;font-size:1.2rem}
+.site-nav{display:flex;gap:0.75rem;align-items:center}
+.site-nav a{color:var(--muted);text-decoration:none;padding:0.45rem 0.8rem;border-radius:10px;font-weight:500}
+.site-nav a:hover{background:linear-gradient(180deg,rgba(91,33,182,0.06), rgba(255,114,111,0.02));color:var(--text)}
+.nav-toggle{display:none;border:0;background:transparent;font-size:1.4rem}
+
+.theme-toggle{border:0;background:transparent;padding:0.4rem 0.6rem;border-radius:8px;cursor:pointer}
+.theme-toggle[aria-pressed="true"]{background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff}
+
+.hero{padding:3rem;border-radius:18px;margin:1.5rem 0;background:linear-gradient(135deg, rgba(91,33,182,0.06), rgba(255,114,111,0.03));box-shadow:var(--shadow)}
+.hero-inner h1{margin:0 0 0.75rem;font-size:2.1rem;line-height:1.05}
+.hero-inner p{margin:0 0 1.25rem;color:var(--muted);max-width:62ch}
+.hero-cta .btn{margin-right:0.6rem}
+
+.cards{display:grid;gap:1rem;grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);padding:1.25rem;border-radius:calc(var(--radius) - 2px);box-shadow:var(--shadow);border:1px solid rgba(15,23,36,0.03)}
+.testimonials{margin-top:2rem}
+.test-list blockquote{margin:0 0 0.5rem;padding:1rem;background:linear-gradient(180deg,#fff,#fff);border-left:4px solid var(--primary);border-radius:8px}
+
+.site-footer{border-top:1px solid rgba(0,0,0,0.06);padding:1.25rem 0;margin-top:0;flex-shrink:0;background:transparent}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+
+/* Agenda & forms */
+.form-inline{display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center}
+.form-inline input, .contact-form input, .contact-form textarea{padding:0.75rem;border-radius:10px;border:1px solid rgba(15,23,36,0.06);background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4))}
+.agenda-list ul{list-style:none;padding:0;margin:0}
+.agenda-list li{background:var(--card);padding:0.8rem;margin:0.5rem 0;border-radius:10px;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--shadow)}
+.btn{border:0;padding:0.6rem 0.9rem;border-radius:10px;background:transparent;cursor:pointer}
+.btn.primary{background:var(--primary);color:white}
+.btn.ghost{background:transparent;border:1px solid rgba(15,23,36,0.06)}
+
+/* Contact form layout improvements */
+.contact-grid{display:grid;grid-template-columns:1.3fr 300px;gap:0.8rem;align-items:start}
+.contact-form{display:flex;flex-direction:column;gap:0.85rem;max-width:none;width:100%;padding:0.9rem 0.9rem;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));border-radius:12px;border:1px solid rgba(11,37,69,0.04)}
+.contact-form label{display:flex;flex-direction:column;font-weight:600;color:var(--text);gap:0.35rem;font-size:0.95rem}
+.contact-form input{width:100%;padding:0.7rem;border-radius:10px;border:1px solid rgba(11,37,69,0.06);background:transparent}
+.contact-form textarea{resize:none;min-height:160px;max-height:160px;padding:0.7rem;border-radius:10px;border:1px solid rgba(11,37,69,0.06);background:transparent}
+.contact-form input::placeholder, .contact-form textarea::placeholder{color:var(--muted)}
+
+.contact-info{background:transparent;padding:0.25rem 0.5rem}
+.contact-info h2{margin-top:0}
+
+/* Button enhancements */
+.btn.large{padding:0.65rem 1rem;border-radius:999px;font-weight:600}
+.btn.primary{box-shadow:0 6px 18px rgba(91,33,182,0.12)}
+
+@media (max-width:900px){
+  .contact-form{max-width:100%;padding:1rem}
+}
+
+/* subtle transitions */
+*{transition:background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease}
+
+/* Responsive */
+@media (max-width:900px){
+  .cards{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .nav-toggle{display:block}
+  .site-nav{position:fixed;top:64px;right:12px;background:var(--card);padding:0.75rem;border-radius:12px;box-shadow:var(--shadow);flex-direction:column;display:none}
+  .site-nav.open{display:flex}
+  .contact-grid{grid-template-columns:1fr;}
+}
+
+/* light theme palette override (clear, blue, complementary) */
+:root{
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --text: #0b2545; /* deep blue text */
+  --muted: #556a86;
+  --primary: #4f46e5; /* indigo */
+  --secondary: #60a5fa; /* light blue */
+  --accent: #ff7a72; /* coral */
+  --glass: rgba(255,255,255,0.6);
+  --shadow: 0 10px 30px rgba(11,37,69,0.06);
+}
+
+/* dark theme inspired by VS Code palette: deep slate with cyan/purple accents */
+:root.dark{
+  --bg: #0b1220; /* very dark blue/near black */
+  --surface: #0f1722;
+  --card: #0b1220;
+  --text: #e6eef8;
+  --muted: #9aa6b2;
+  --primary: #7c5cff; /* soft purple */
+  --secondary: #22d3ee; /* cyan */
+  --accent: #ff8b6b;
+  --glass: rgba(255,255,255,0.04);
+  --shadow: 0 10px 30px rgba(2,6,23,0.6);
+}
+
+/* Small helpers */
+.hidden{display:none}
+input:focus,textarea:focus{outline:2px solid rgba(108,92,231,0.18)}
