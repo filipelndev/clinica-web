@@ -419,3 +419,87 @@ input:focus,textarea:focus{outline:2px solid var(--primary)}
     padding: 0;
   }
 }
+
+/* Áreas de Atuação */
+.areas-section {
+  padding: 3rem 1rem;
+}
+
+.areas-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0056b3;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.areas-intro {
+  text-align: center;
+  color: var(--text);
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+/* Grid de cards */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card individual */
+.area-item {
+  border-radius: var(--card-radius);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover com leve flutuação */
+.area-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(69,90,117,0.18);
+}
+
+/* Alternância de cores e sombras */
+.blue-bg {
+  background-color: #f0f6ff; /* azul suave */
+  box-shadow: 0 6px 18px rgba(69,90,117,0.08);
+}
+
+.white-bg {
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Tipografia do card */
+.area-item h3 {
+  color: #0056b3;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.area-item p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .area-item {
+    padding: 1.5rem 1rem;
+    min-height: auto;
+  }
+}
