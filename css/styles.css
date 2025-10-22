@@ -399,3 +399,23 @@ input:focus,textarea:focus{outline:2px solid var(--primary)}
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(234,95,13,0.15);
 }
+
+/* Responsividade da CTA Section */
+@media (max-width: 700px) {
+  .cta-section {
+    padding: 1.8rem 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .cta-section .btn.primary {
+    display: inline-block;
+    width: 100%;
+    max-width: 320px;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.05rem;
+  }
+
+  .cta-section .container {
+    padding: 0;
+  }
+}
