@@ -3,61 +3,155 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Clínica - Início</title>
+  <title>Etelvina Psicóloga</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <!-- NAVBAR FIXA -->
+  <header class="site-header navbar-fixed">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Clínica</a>
-      <div style="display:flex;gap:.5rem;align-items:center">
-        <button class="theme-toggle" aria-pressed="false" aria-label="Alternar tema">🌓</button>
-        <button class="nav-toggle" aria-label="Abrir menu">☰</button>
-      </div>
-      <nav class="site-nav" aria-label="Navegação principal">
-        <a href="index.html">Início</a>
-        <a href="about.html">Sobre</a>
-        <a href="agenda.html">Agenda</a>
-        <a href="contact.html">Contato</a>
+      <a class="brand logo" href="#home">
+        <span class="logo-text">Etelvina Psicóloga Online</span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#beneficios">Sobre</a></li>
+          <li><a href="#agenda">Áreas de Atuação</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li>
+            <a href="https://wa.me/5527995733565" target="_blank" rel="noopener" class="whatsapp-link" aria-label="WhatsApp">
+              <!-- Circle WhatsApp icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="#25D366" />
+                <path d="M16.2 14.6c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.6.1-.2.2-.7.6-.9.8-.2.2-.4.2-.7.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.5-1.7-1.7-2-.2-.3-.1-.5.1-.7.1-.1.2-.3.4-.5.1-.2.1-.3.2-.5.1-.2 0-.4-.1-.6-.1-.2-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4-.1 0-.3 0-.5 0-.2 0-.4.1-.6.3-.2.2-.8.7-.8 1.7 0 1 .7 2 1 2.1.3.2 1.3 2 3.2 2.7.4.2.8.3 1.1.4.5.1 1 .1 1.4.06.4-.1 1.1-.4 1.3-.8.2-.4.2-.8.1-.9-.1-.1-.2-.2-.4-.4z" fill="#fff"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      
     </div>
   </header>
 
   <main class="site-main">
-    <section class="hero">
+    <!-- HERO COM OVERLAY -->
+    <section id="home" class="hero warm-hero">
+      <div class="hero-bg-overlay"></div>
       <div class="container hero-inner">
-        <h1>Espaço de cuidado e escuta</h1>
-        <p>Atendimento humanizado para adultos, adolescentes e casais. Espaço seguro para seu processo de transformação.</p>
-        <div class="hero-cta">
-          <a class="btn primary" href="contact.html">Agende uma avaliação</a>
-          <a class="btn ghost" href="about.html">Sobre a profissional</a>
+        <h1 class="hero-title" style="text-align:center">Te ajudo a encontrar o equilíbrio que você busca.</h1>
+        <p class="lead" style="text-align:center;max-width:600px;margin:0 auto 2rem auto;">Cuide da sua saúde mental com a TCC — Atendimentos 100% online e presencial.</p>
+        <div style="text-align:center;margin-bottom:2.5rem;">
+          <a class="btn primary large" href="#contact">VAMOS CONVERSAR</a>
+        </div>
+        <div class="hero-cards-row">
+          <div class="hero-card">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=120&q=80" alt="Sigilo completo" class="hero-card-img" />
+            <h3>Sigilo completo</h3>
+            <p>Todas as informações compartilhadas são tratadas com absoluto sigilo, ética e respeito, conforme o Código de Ética Profissional da Psicologia.</p>
+          </div>
+          <div class="hero-card">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=120&q=80" alt="Atendimento personalizado" class="hero-card-img" />
+            <h3>Atendimento personalizado</h3>
+            <p>Cada pessoa é única, por isso o plano terapêutico é construído de forma individualizada, de acordo com suas necessidades, objetivos e ritmo.</p>
+          </div>
+          <div class="hero-card">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=120&q=80" alt="Acolhimento" class="hero-card-img" />
+            <h3>Acolhimento</h3>
+            <p>Você será recebido em um ambiente seguro, respeitoso e acolhedor, onde poderá compartilhar sua história com liberdade e confiança.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="services container">
-      <h2>Atendimentos</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Psicoterapia individual</h3>
-          <p>Escuta qualificada para processos de ansiedade, depressão e desenvolvimento pessoal.</p>
-        </article>
-        <article class="card">
-          <h3>Atendimento de casal</h3>
-          <p>Mediação e acompanhamento para fortalecer a comunicação e relações íntimas.</p>
-        </article>
-        <article class="card">
-          <h3>Avaliação inicial</h3>
-          <p>Primeira sessão com objetivo de avaliação e definição de objetivos terapêuticos.</p>
-        </article>
+    <section id="beneficios" class="container beneficios-section">
+      <h2 style="text-align:center">Como a terapia pode te ajudar?</h2>
+      <div class="beneficios-grid">
+        <div class="beneficio-card light">
+          <h3>Autoconhecimento</h3>
+          <p>Através da terapia, você pode entender melhor seus pensamentos, emoções e comportamentos, ganhando clareza sobre si mesmo.</p>
+        </div>
+        <div class="beneficio-card dark">
+          <h3>Relacionamentos Mais Saudáveis</h3>
+          <p>Terapia pode melhorar seus relacionamentos ao ajudá-lo a comunicar-se de forma mais eficaz, estabelecer limites saudáveis e compreender melhor as dinâmicas interpessoais.</p>
+        </div>
+        <div class="beneficio-card dark">
+          <h3>Redução de sintomas emocionais</h3>
+          <p>A psicoterapia é eficaz no tratamento de condições como ansiedade, depressão, estresse crônico, burnout, entre outras questões emocionais e comportamentais.</p>
+        </div>
+        <div class="beneficio-card light">
+          <h3>Apoio durante Transições</h3>
+          <p>Seja uma mudança de carreira, divórcio, luto ou qualquer outra transição importante, a terapia pode fornecer suporte emocional e orientação para navegar por esses momentos desafiadores.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin:2rem 0 0 0;">
+        <a class="btn primary large" href="#contact">Agendar uma consulta</a>
+      </div>
+      <!-- Sobre a profissional (inserida abaixo do CTA de agendamento) -->
+      <div class="about-professional container" style="margin-top:1.6rem;">
+        <div class="about-inner">
+          <h3>Sobre a profissional</h3>
+          <p>Olá! Eu sou a Etelvina Viana Fernandes, psicóloga (CRP 16/2850) especialista em Terapia Cognitiva Comportamental (TCC), pós graduada em Saúde da Família e Saúde Coletiva e Especialista em Dependência Química.</p>
+          <p>Atuo na área clínica, com atendimentos online, oferecendo um espaço acolhedor, seguro e ético onde você possa cuidar de sua saúde mental.</p>
+          <p>Entender que a psicoterapia serve para melhorar a saúde mental, promover autoconhecimento e colocar luz em questões como ansiedade, depressão e traumas. Ou seja, a psicoterapia traz respostas para os seus “porquês”, tornando o seu dia a dia mais leve. Você aprendendo em como lhe dar com os conflitos, a fortalecer a inteligência emocional e a aumentar a resiliência para enfrentar os desafios da vida com autonomia.</p>
+          <p>Na atualidade sabemos o quanto é importante contar com o apoio profissional, e as consultas online vêm simplificar este processo de autoconhecimento tão necessário e valioso. A psicoterapia ajuda a identificar e alterar padrões de pensamentos resultando em melhor qualidade de vida.</p>
+        </div>
       </div>
     </section>
+    
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <div class="container">
+        <a class="btn primary large" href="#contact" role="button">Entre em contato e saiba mais sobre os atendimentos</a>
+      </div>
+    </div>
 
-    <section class="testimonials container">
-      <h2>Depoimentos</h2>
-      <div class="test-list">
-        <blockquote>"Acolhimento transformador e profissionalismo ao longo de todo o processo."</blockquote>
-        <cite>— Cliente satisfeito</cite>
+    <section id="contact" class="container contact-section">
+  <h2 style="text-align:center">Contato</h2>
+  <div class="contact-grid">
+    <form id="contactForm" class="contact-form" aria-label="Formulário de contato">
+      <label for="contact-name">Nome
+        <input type="text" id="contact-name" name="name" placeholder="Seu nome completo" required />
+      </label>
+
+      <label for="contact-email">E-mail
+        <input type="email" id="contact-email" name="email" placeholder="seu@email.com" required />
+      </label>
+
+      <!-- Campo de data opcional -->
+      <label for="contact-date">Data da consulta (opcional)
+        <input type="date" id="contact-date" name="date" />
+      </label>
+
+      <label for="contact-message">Mensagem
+        <textarea id="contact-message" name="message" rows="5" placeholder="Descreva brevemente o motivo do contato" required></textarea>
+      </label>
+
+      <div style="display:flex;justify-content:flex-end">
+        <button class="btn primary large" type="submit">Enviar</button>
+      </div>
+    </form>
+
+    <aside class="contact-info">
+      <ul>
+        <li>Atendimento online por vídeo chamada.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+
+    <section id="depoimentos" class="container depoimentos-section">
+      <h2 style="text-align:center">Depoimentos</h2>
+      <div class="depoimentos-grid">
+        <blockquote>“Acolhimento e profissionalismo em cada sessão. Recomendo muito!”<br><span class="depoimento-nome">L.M</span></blockquote>
+        <blockquote>“Ótima, muito solícita e atenciosa. Estou adorando!”<br><span class="depoimento-nome">T.M.C</span></blockquote>
+        <blockquote>“Muito atenciosa, de escuta ativa. Me fez querer que chegue logo a próxima sessão!”<br><span class="depoimento-nome">V.A.B.C</span></blockquote>
       </div>
     </section>
   </main>
@@ -65,18 +159,36 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <strong>Clínica</strong>
-        <p>Atendimento presencial e online</p>
+        <strong>Etelvina Psicóloga</strong>
+        <p>Atendimento online</p>
       </div>
-      <nav aria-label="Rodapé">
-        <a href="about.html">Sobre</a>
-        <a href="agenda.html">Agenda</a>
-        <a href="contact.html">Contato</a>
-      </nav>
     </div>
-    <small class="copyright">© <span id="year"></span> Clínica — Todos os direitos reservados</small>
+    <small class="copyright">© <span id="year"></span> Codewave — Todos os direitos reservados</small>
   </footer>
 
   <script src="js/main.js"></script>
+  <!-- Floating WhatsApp button -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/5527995733565" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#ffffff" d="M16.2 14.6c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.6.1-.2.2-.7.6-.9.8-.2.2-.4.2-.7.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.5-1.7-1.7-2-.2-.3-.1-.5.1-.7.1-.1.2-.3.4-.5.1-.2.1-.3.2-.5.1-.2 0-.4-.1-.6-.1-.2-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4-.1 0-.3 0-.5 0-.2 0-.4.1-.6.3-.2.2-.8.7-.8 1.7 0 1 .7 2 1 2.1.3.2 1.3 2 3.2 2.7.4.2.8.3 1.1.4.5.1 1 .1 1.4.06.4-.1 1.1-.4 1.3-.8.2-.4.2-.8.1-.9-.1-.1-.2-.2-.4-.4z"/>
+      </svg>
+    </a>
+  </div>
+  <script>
+    // Menu mobile toggle
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    navToggle.addEventListener('click', function() {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      mainNav.classList.toggle('open');
+    });
+  </script>
+  <!-- FullCalendar interaction plugin + calendar initialization -->
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/main.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@6.1.8/main.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@6.1.8/main.min.js'></script>
+  <script src="js/calendar.js"></script>
 </body>
 </html>

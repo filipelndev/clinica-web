@@ -32,6 +32,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
   }
 
+    // Smooth scroll for internal nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const href = a.getAttribute('href');
+        if(href.startsWith('#')){
+          const target = document.querySelector(href);
+          if(target){
+            e.preventDefault();
+            target.scrollIntoView({behavior:'smooth', block:'start'});
+            // close mobile nav if open
+            if(siteNav && siteNav.classList.contains('open')) siteNav.classList.remove('open');
+          }
+        }
+      })
+    })
+
   // Agenda
   const appointmentsEl = document.getElementById('appointments');
   const apForm = document.getElementById('appointmentForm');
